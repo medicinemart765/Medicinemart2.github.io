@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>My First Acode Site</title>
+
+  <!-- CSS: write styles here -->
+  <style>
+    :root{
+      --bg: #f5f7fb;
+      --card: #ffffff;
+      --accent: #3b82f6;
+      --text: #1f2937;
+    }
+    *{box-sizing: border-box;}
+    body{
+      margin:0;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      padding: 30px;
+      display:flex;
+      justify-content:center;
+    }
+
+    .container{
+      width:100%;
+      max-width:900px;
+      background:var(--card);
+      border-radius:12px;
+      padding:28px;
+      box-shadow: 0 8px 30px rgba(15,23,42,0.06);
+    }
+
+    header{ text-align:center; margin-bottom:18px; }
+    h1{ margin:0 0 6px 0; font-size:26px; }
+    p.lead{ margin:0; color:#475569; }
+
+    .hero{
+      display:flex;
+      gap:18px;
+      align-items:center;
+      margin-top:20px;
+    }
+    .avatar{
+      width:110px;
+      height:110px;
+      border-radius:12px;
+      background:linear-gradient(135deg,#60a5fa,#7c3aed);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:white;
+      font-weight:700;
+      font-size:28px;
+    }
+
+    .actions button{
+      padding:10px 16px;
+      border:none;
+      border-radius:8px;
+      cursor:pointer;
+      background:var(--accent);
+      color:white;
+      font-weight:600;
+    }
+
+    footer{ text-align:center; margin-top:20px; color:#64748b; font-size:13px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Hey — I'm building a site in Acode</h1>
+      <p class="lead">This is a single file page (HTML + CSS + JS). Preview it in Acode!</p>
+    </header>
+
+    <section class="hero">
+      <div class="avatar">YA</div>
+      <div style="flex:1">
+        <h2 id="name">Your Name</h2>
+        <p id="bio">A short bio about you — edit this text.</p>
+        <div class="actions" style="margin-top:12px;">
+          <button onclick="sayHi()">Say Hi</button>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      Built with Acode — single file demo.
+    </footer>
+  </div>
+
+  <!-- JavaScript: write interactive code here -->
+  <script>
+    function sayHi(){
+      const name = document.getElementById('name').innerText;
+      alert('Hello ' + name + '! Nice to meet you 😊');
+    }
+
+    // small example: change background color every 3 seconds (optional)
+    // Uncomment to try:
+    // setInterval(() => {
+    //   document.body.style.background = '#' + Math.floor(Math.random()*16777215).toString(16);
+    // }, 3000);
+  </script>
+</body>
+</html>
